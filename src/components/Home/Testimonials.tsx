@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import { Card, CardContent, CardFooter } from "../ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 const Testimonials = () => {
   return (
@@ -20,13 +20,15 @@ const Testimonials = () => {
           </CardContent>
           <CardFooter className="flex flex-col items-center justify-center">
             <figcaption className="mt-10">
-              <Image
-                alt="image"
-                width={100}
-                height={100}
-                src="/"
-                className="mx-auto size-10 rounded-full"
-              />
+              <div className="flex items-center justify-center">
+                <Avatar>
+                  <AvatarImage
+                    src="https://github.com/shadcn.png"
+                    alt="@shadcn"
+                  />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
               <div className="mt-4 flex items-center justify-center space-x-3 text-base">
                 <div className="font-semibold text-foreground">
                   Judith Black
